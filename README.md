@@ -156,3 +156,7 @@ if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi`<br />
 Reboot the system for the changes to take effect.
+
+
+
+https://askubuntu.com/questions/1077061/how-do-i-install-nvidia-and-cuda-drivers-into-ubuntu
