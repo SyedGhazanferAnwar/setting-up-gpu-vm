@@ -28,6 +28,7 @@ Update the system again:
 Install CUDA 10.1:
 
 `sudo apt install cuda-10-1`<br />
+NOTE:If above command shows error then try  `sudo aptitude install cuda-10-1` <br />
 It should be installing the NVIDIA 418.40 drivers with it as those are what are listed in the repo. See: http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/
 
 Install libcudnn7 7.5.1:
