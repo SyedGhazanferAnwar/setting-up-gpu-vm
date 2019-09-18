@@ -35,11 +35,14 @@ Install libcudnn7 7.5.1:
 `sudo apt install libcudnn7`<br />
 Add the following lines to your ~/.profile file for CUDA 10.1 (`nano ~/.profile` and append the below code at last line)
 
-``# set PATH for cuda 10.1 installation
+```
+# set PATH for cuda 10.1 installation
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi``<br />
+fi
+```
+<br />
 Reboot the computer and check your settings when reboot is complete:
 
 Check NVIDIA Cuda Compiler with `nvcc --version`:
@@ -53,7 +56,7 @@ Check libcudnn version /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH)
 terrance@terrance-ubuntu:~$ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
     libcudnn.so.7 -> libcudnn.so.7.5.1
 Check NVIDIA driver with nvidia-smi:
-
+```
 terrance@terrance-ubuntu:~$ nvidia-smi 
 Sat Jun  1 09:38:07 2019       
 +-----------------------------------------------------------------------------+
@@ -73,6 +76,7 @@ Sat Jun  1 09:38:07 2019
 |    0      2216      G   /usr/lib/xorg/Xorg                           110MiB |
 |    0      2542      G   compton                                        1MiB |
 +-----------------------------------------------------------------------------+
+```
 .run file install
 By using the `sudo add-apt-repository ppa:graphics-drivers/ppa` you can install the 430.26 newest driver or any that suit your fancy.
 
@@ -96,7 +100,7 @@ Then run the installer:
 
 `sudo sh cuda_10.1.105_418.39_linux.run`<br />
 Type in accept and press enter on this screen:
-
+```
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │  End User License Agreement                                                  │
 │  --------------------------                                                  │
@@ -148,13 +152,16 @@ Unselect the driver and then choose Install by using the arrow keys and space ba
 │                                                                              │
 │ Up/Down: Move | Left/Right: Expand | 'Enter': Select | 'A': Advanced options │
 Wait for the install to finish, it might say errors during, but not to worry.
-
+```
 Add the following lines to your ~/.profile file for CUDA 10.1
-`# set PATH for cuda 10.1 installation
+```
+# set PATH for cuda 10.1 installation
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
     export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi`<br />
+fi
+```
+<br />
 Reboot the system for the changes to take effect.
 
 
