@@ -47,15 +47,16 @@ fi
 Reboot the computer and check your settings when reboot is complete:
 
 Check NVIDIA Cuda Compiler with `nvcc --version`:
-
+```
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2019 NVIDIA Corporation
 Built on Wed_Apr_24_19:10:27_PDT_2019
 Cuda compilation tools, release 10.1, V10.1.168
-Check libcudnn version /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn:
+```
+Check libcudnn version `/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn:`
 
-terrance@terrance-ubuntu:~$ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
-    libcudnn.so.7 -> libcudnn.so.7.5.1
+`terrance@terrance-ubuntu:~$ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
+    libcudnn.so.7 -> libcudnn.so.7.5.1`
 Check NVIDIA driver with nvidia-smi:
 ```
 terrance@terrance-ubuntu:~$ nvidia-smi 
@@ -94,7 +95,7 @@ Update the system:
 sudo apt update
 Install libcudnn7.5.1:
 
-sudo apt install libcudnn7
+`sudo apt install libcudnn7`
 Now download the cuda_10.1.105_418.39_linux.run from https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal
 
 Then run the installer:
