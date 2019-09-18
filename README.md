@@ -33,7 +33,7 @@ It should be installing the NVIDIA 418.40 drivers with it as those are what are 
 Install libcudnn7 7.5.1:
 
 `sudo apt install libcudnn7`<br />
-Add the following lines to your ~/.profile file for CUDA 10.1
+Add the following lines to your ~/.profile file for CUDA 10.1 (`nano ~/.profile` and append the below code at last line)
 
 ``# set PATH for cuda 10.1 installation
 if [ -d "/usr/local/cuda-10.1/bin/" ]; then
