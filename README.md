@@ -53,6 +53,7 @@ Copyright (c) 2005-2019 NVIDIA Corporation
 Built on Wed_Apr_24_19:10:27_PDT_2019
 Cuda compilation tools, release 10.1, V10.1.168
 ```
+ Note: If issue with nvcc command run `sudo apt install nvidia-cuda-toolkit`
 Check libcudnn version `/sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn:`
 
 `terrance@terrance-ubuntu:~$ /sbin/ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
