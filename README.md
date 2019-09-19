@@ -1,5 +1,5 @@
 # setting-up-gpu-vm
-
+## Ubuntu 18.04, CUDA 10.1, libcudnn 7.5.1 and NVIDIA 418.67 drivers:
 These instructions are for installing CUDA through the repository instead of the .deb installation.The following lines you can copy and paste to a terminal window. Press `Ctrl+Alt+T` to open a terminal window.
 Remove any CUDA PPAs that may be setup and also remove the nvidia-cuda-toolkit if installed:
 
@@ -21,7 +21,10 @@ Add the repos:
 
 `sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'`
 
-`sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'`<br />
+```
+sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
+```
+<br />
 Update the system again:
 
 `sudo apt update`<br />
@@ -45,6 +48,7 @@ fi
 ```
 <br />
 Reboot the computer and check your settings when reboot is complete:
+`sudo reboot`<br />
 
 Check NVIDIA Cuda Compiler with `nvcc --version`:
 ```
@@ -86,7 +90,10 @@ Next, install the libcudnn7 by following:
 
 Add the Repo:
 
-`sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'`<br />
+```
+sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list'
+```
+<br />
 Install the key:
 
 sudo apt-key adv --fetch-keys  http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
