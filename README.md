@@ -48,7 +48,8 @@ fi
 ```
 <br />
 Reboot the computer and check your settings when reboot is complete:
-`sudo reboot`<br />
+`sudo reboot`
+<br />
 
 Check NVIDIA Cuda Compiler with `nvcc --version`:
 ```
