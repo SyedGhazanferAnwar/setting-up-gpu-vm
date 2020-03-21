@@ -17,6 +17,7 @@ Recently, I just found out that the CUDA installation works with the graphics-dr
 Install the key:
 
 `sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub`
+
 Add the repos:
 
 `sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list'`
